@@ -24,3 +24,8 @@
   width: 100px;
   height: 100px;
 }
+
+.search-container{
+  display: flex;
+  justify-content: center;
+}

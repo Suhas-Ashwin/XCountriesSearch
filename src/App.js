@@ -36,7 +36,7 @@ export default function App() {
         onChange={(e) => setSearch(e.target.value)}
       />
       {isSearch ? (
-        <div className="container">
+        <div className="search-container">
           {filterData.map((country) => {
             return (
               <div key={country.ccn3} className="card">
@@ -66,20 +66,6 @@ export default function App() {
           })}
         </div>
       )}
-      <div className="container">
-        {data.map((country) => {
-          return (
-            <div key={country.ccn3} className="card">
-              <img
-                src={country.flags.png}
-                alt={`Flag of ${country.name.common}`}
-                className="flag-img"
-              />
-              <h3> {country.name.common} </h3>
-            </div>
-          );
-        })}
-      </div>
     </div>
   );
 }
