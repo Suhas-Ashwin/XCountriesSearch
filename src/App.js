@@ -27,6 +27,34 @@ export default function App() {
     }
   }, [search]);
 
+  const container = {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+  };
+
+  const card = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "10px",
+    padding: "10px",
+    border: "1px solid #ccc",
+    borderRadius: "10px",
+    width: "200px",
+  };
+  const flagStyle = {
+    width: "100px",
+    height: "100px",
+  };
+  const searchContainer = {
+    display: "flex",
+    justifyContent: "center",
+  };
+
   return (
     <div className="App">
       <input
@@ -36,31 +64,33 @@ export default function App() {
         onChange={(e) => setSearch(e.target.value)}
       />
       {isSearch ? (
-        <div className="search-container">
+        <div style={searchContainer} className="countryCard">
           {filterData.map((country) => {
             return (
-              <div className="countryCard" key={country.ccn3} >
+              <div key={country.ccn3} style={card} className="countryCard">
                 <img
                   src={country.flags.png}
                   alt={`Flag of ${country.name.common}`}
+                  style={flagStyle}
                   className="flag-img"
                 />
-                <h2> {country.name.common} </h2>
+                <h3> {country.name.common} </h3>
               </div>
             );
           })}
         </div>
       ) : (
-        <div className="container">
+        <div style={container} className="countryCard">
           {data.map((country) => {
             return (
-              <div className="countryCard" key={country.ccn3} >
+              <div key={country.ccn3} style={card} className="countryCard">
                 <img
                   src={country.flags.png}
                   alt={`Flag of ${country.name.common}`}
+                  style={flagStyle}
                   className="flag-img"
                 />
-                <h2> {country.name.common} </h2>
+                <h3> {country.name.common} </h3>
               </div>
             );
           })}
@@ -69,3 +99,4 @@ export default function App() {
     </div>
   );
 }
+
