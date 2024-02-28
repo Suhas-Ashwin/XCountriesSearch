@@ -2,14 +2,14 @@
   font-family: sans-serif;
   text-align: center;
 }
-.countryCard {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.card {
+.countryCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
