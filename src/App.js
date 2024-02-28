@@ -39,7 +39,7 @@ export default function App() {
         <div className="search-container">
           {filterData.map((country) => {
             return (
-              <div className="CountryCard" key={country.ccn3} >
+              <div className="countryCard" key={country.ccn3} >
                 <img
                   src={country.flags.png}
                   alt={`Flag of ${country.name.common}`}
@@ -54,7 +54,7 @@ export default function App() {
         <div className="container">
           {data.map((country) => {
             return (
-              <div className="CountryCard" key={country.ccn3} >
+              <div className="countryCard" key={country.ccn3} >
                 <img
                   src={country.flags.png}
                   alt={`Flag of ${country.name.common}`}
