@@ -9,7 +9,7 @@
   align-items: center;
   height: 100vh;
 }
-.Card {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@
   height: 100px;
 }
 
-.search-container{
+.search-container {
   display: flex;
   justify-content: center;
 }
