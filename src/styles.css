@@ -9,7 +9,7 @@
   align-items: center;
   height: 100vh;
 }
-.card {
+.countryCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
