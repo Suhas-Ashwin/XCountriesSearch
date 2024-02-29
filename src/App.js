@@ -311,7 +311,7 @@ export default function App() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <div className="countryCard" style={container}>
+      <div className="container" style={container}>
         {search.length > 0 ? (
           filterData.length > 0 ? (
             filterData.map((country) => {
