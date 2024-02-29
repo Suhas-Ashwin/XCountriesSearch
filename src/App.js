@@ -328,7 +328,7 @@ export default function App() {
               );
             })
           ) : (
-            <p> No matching countries</p>
+            null
           )
         ) : (
           data.map((country) => {
